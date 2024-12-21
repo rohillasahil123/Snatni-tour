@@ -25,9 +25,6 @@ const Choose = () => {
         }
     ]
 
-
-
-
   return (
     <div className='choose-container sm:h-[60vh] h-[110vh] w-full flex flex-col justify-center items-center'>
         <div className='choose-container-title text-center'>

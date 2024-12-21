@@ -2,8 +2,10 @@ import React from "react";
 import { FaOm } from "react-icons/fa";
 import divine from "../../assets/Divine.jpeg";
 import saffron from "../../assets/saffron.jpeg";
+import hotel from "../../assets/Hotel.jpeg";
+import agoda from "../../assets/AgodaHotel.jpeg";
 
-const allPackage = [
+const gitaPackage = [
   {
     id: 1,
     name: "Confrot Travling in Gita Mohtsav",
@@ -33,11 +35,37 @@ const allPackage = [
   },
 ];
 
+const KumbhPackage = [
+  {
+    id: 1,
+    name: "Confrot Travling in Kumbh Mohtsav",
+    price: 5000,
+    HotelName: "Hotel Saffron",
+    time: "7Days",
+    Distance: "1200km",
+    image: hotel,
+    city: "ParyagRaj"
+  },
+  {
+    id: 2,
+    name: "Deluxe Travling in Kumbh Mohtsav",
+    price: 10000,
+    HotelName: "Divine clarks inn suites",
+    time: "10Days",
+    Distance: "1400km",
+    image: agoda,
+    city: "ParyagRaj"
+  },
+
+
+]
+
+
 const GitaPackage = () => {
   return (
-    <div className="h-[170vh] sm:h-[100vh] w-[100%] ">
+    <div className="h-[270vh] sm:h-[180vh] w-[100%] ">
       <div className="h-10 w-full text-center items-center">
-        <h1 className="text-orange-500 font-bold text-2xl">GITA MOHTSAV</h1>
+        <h1 className="text-orange-500 font-bold text-2xl">GITA MOHTSAV PACKAGE</h1>
         <div className="flex justify-center">
           -------
           <FaOm size={30} />
@@ -54,7 +82,7 @@ const GitaPackage = () => {
       </h1>
     <div className="flex flex-col sm:flex-row sm:space-x-5 space-x-0 sm:h-[70vh] h-[50vh] mt-[99%] sm:mt-[0%] justify-center items-center">
         {
-            allPackage.map((packageItem ,i ) => (
+           gitaPackage.map((packageItem ,i ) => (
                 <div key={i} className=" sm:h-[90%] sm:w-[23%] h-[90%] w-[90%] border items-center sm:mt-[3%]   shadow-xl">
                     <img src={packageItem.image} alt="" className="h-[40%] mt-[3%] rounded-md w-[95%]" style={{justifySelf:"center"}} />
                     <div className="mt-6" style={{justifySelf:"center"}} >
@@ -74,6 +102,33 @@ const GitaPackage = () => {
         }
     
     </div>
+
+        <div className="flex justify-center items-center mt-[97%] sm:mt-[3%]">
+        <h1 className="text-orange-500 font-bold text-2xl">KUMBH MOHTSAV PACKAGE</h1>
+        </div>
+        <div className="flex flex-col sm:flex-row sm:space-x-5 space-x-0 sm:h-[70vh] h-[50vh] mt-[50%] sm:mt-[0%] justify-center items-center">
+        {
+           KumbhPackage.map((packageItem ,i ) => (
+                <div key={i} className=" sm:h-[90%] sm:w-[26%] h-[90%] w-[90%] border items-center sm:mt-[3%]   shadow-xl">
+                    <img src={packageItem.image} alt="" className="h-[40%] mt-[3%] rounded-md w-[95%]" style={{justifySelf:"center"}} />
+                    <div className="mt-6" style={{justifySelf:"center"}} >
+                  <h4> <span className="font-semibold">Title: </span>{packageItem.name}</h4>
+                  <h4> <span className="font-semibold">Hotel Name :</span> :{packageItem.HotelName}</h4>
+                  <h4> <span className="font-semibold">Duration :</span> {packageItem.time}</h4>
+                  <h4><span className="font-semibold">Distance :</span>{packageItem.Distance}</h4> 
+                  <h4> <span className="font-semibold">Price :</span>{packageItem.price} ₹</h4>
+                </div>
+                <hr className="border-t-1 border-gray-500 mt-5" />
+                <div className="flex justify-around w-full mt-2">
+                  <button type="button" className="bg-orange-500 h-9 text-white rounded w-[40%] text-[15px] hover:bg-orange-900  ">View Details</button>
+                  <button type="button" className="bg-orange-500 h-9 text-white rounded w-[40%] text-[15px] hover:bg-orange-900  ">Book Now</button>
+                </div>
+                </div>
+            ))
+        }
+    
+    </div>
+
     </div>
   );
 };

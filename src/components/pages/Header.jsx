@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import logo from "../../assets/logo.png"
+import { Link } from 'react-router-dom'
+
+
+
 const Header = () => {
  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
@@ -30,9 +34,9 @@ const Header = () => {
          </button>
           {/* Desktop menu */}
          <div className='hidden md:flex space-x-6 uppercase font-bold hover:cursor-pointer'>
-           <div>Home</div>
-           <div>About Us</div>
-           <div>gita mahotsav</div>
+           <div><Link to="/"> Home </Link></div>
+           <div><Link to="/about"> About Us </Link></div>
+           <div>  <Link to="/gita-mohtsav"> Gita Mahotsav </Link>  </div>
            <div>kumbh mela</div>
            <div>Vaishno Devi</div>
            <div>Khatu Shyam</div>
