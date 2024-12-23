@@ -36,7 +36,7 @@ const Header = () => {
          <div className='hidden md:flex space-x-6 uppercase font-bold hover:cursor-pointer'>
            <div><Link to="/"> Home </Link></div>
            <div><Link to="/about"> About Us </Link></div>
-           <div>  <Link to="/gita-mohtsav"> Gita Mahotsav </Link>  </div>
+           <div><Link to="/gita-mohtsav"> Gita Mahotsav </Link></div>
            <div>kumbh mela</div>
            <div>Vaishno Devi</div>
            <div>Khatu Shyam</div>
@@ -45,9 +45,9 @@ const Header = () => {
         {/* Mobile menu */}
        {isMenuOpen && (
          <div className='md:hidden mt-4 space-y-3 uppercase font-bold'>
-           <div className='p-2 hover:bg-orange-100'>Home</div>
-           <div className='p-2 hover:bg-orange-100'>About Us</div>
-           <div className='p-2 hover:bg-orange-100'>gita mahotsav</div>
+           <div className='p-2 hover:bg-orange-100'><Link to="/"> Home </Link></div>
+           <div className='p-2 hover:bg-orange-100'><Link to="/about"> About Us </Link></div>
+           <div className='p-2 hover:bg-orange-100'><Link to="/gita-mohtsav"> Gita Mahotsav </Link></div>
            <div className='p-2 hover:bg-orange-100'>kumbh mela</div>
            <div className='p-2 hover:bg-orange-100'>Vaishno Devi</div>
            <div className='p-2 hover:bg-orange-100'>Khatu Shyam</div>
